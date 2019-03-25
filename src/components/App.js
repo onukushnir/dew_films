@@ -1,19 +1,21 @@
 import React, { Component } from "react";
-import FilmCard from "./films/FilmCard";
+import FilmsList from "./films";
 import { films } from "../data";
 
 class App extends Component {
   state = {
     items: []
   };
+
   componentDidMount() {
     this.setState({ items: films });
   }
 
   render() {
+    const { items } = this.state;
     return (
       <div className="ui container pt-3">
-        <FilmCard />
+        <FilmsList films={items} />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Featured from "./Featured";
 
 const FilmCard = ({ film }) => {
   return (
@@ -9,11 +10,13 @@ const FilmCard = ({ film }) => {
       </span>
       <div className="image">
         <span className="ui green label ribbon">$ {film.price}</span>
+        <Featured featured={film.featured} />
         <img src={film.img} alt={film.title} />
       </div>
 
       <div className="content">
         <span className="header">{film.title}</span>
+
         <div className="meta">
           <i className="icon users" />
           {film.director}
@@ -35,7 +38,8 @@ FilmCard.propTypes = {
     director: PropTypes.string.isRequired,
     description: PropTypes.string,
     duration: PropTypes.number.isRequired,
-    price: PropTypes.number.isRequired
+    price: PropTypes.number.isRequired,
+    featured: PropTypes.bool.isRequired
   }).isRequired
 };
 

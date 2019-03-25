@@ -30,7 +30,7 @@ const films = [
     duration: 110,
     price: 55.2,
     img: "/img/rise.jpg",
-    featured: false,
+    featured: true,
     description:
       "RISE OF THE LEGEND is a story about Lee Chong Wei, who was born in a poor family. He has the talent of playing badminton and went through a lot of difficulties with the spirit of never giving up, finally he becomes a national player."
   }
